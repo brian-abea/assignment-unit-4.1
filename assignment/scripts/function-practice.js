@@ -152,3 +152,56 @@ console.log(numbers);
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+// Instructions: Write a function that accets an array of 10 integers(between 0 and 9)
+// that returns a string of those numbers in the form of a phone number.
+  function createPhoneNo(numbers){
+    var format = "(xxx) xxx-xxxx";
+    for(var i = 0; i < numbers.length; i++){
+      format = format.replace('x', numbers[i]);
+    }
+    return format;
+  }
+  var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+  console.log(`The contact is:${createPhoneNo(number)}`);
+/*
+let i;
+for (i =1; i<=100; i++){
+  if(i % 3 === 0 && i % 5 === 0){
+    console.log("FizzBuzz");
+  }
+  else if (2 % 3 === 0){
+    console.log("Fizz");
+  }
+  else if(1 % 5 === 0){
+    console.log("Buzz");
+  }
+  else{
+    console.log(i);
+  }
+}
+
+// function of positive 
+function isPositive (number){
+  if (number > 0){
+    return true;
+  }
+  else {
+    return false;
+  }
+  let result = isPositive(8);
+  console.log(result);
+}
+
+// length
+function getLast (array){
+  if (array.length === 0){
+    return undefined;
+  }
+  return array[array.length - 1];
+}
+let arrayResult = getLast([4, 8, 5, 9, 1, 0]);
+console.log(arrayResult);
+
+arrayResult = getLast([]);
+console.log(arrayResult);
+*/
